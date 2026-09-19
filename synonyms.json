@@ -1,0 +1,21 @@
+{
+  "green onion": ["scallion", "scallions", "spring onion", "spring onions", "salad onion"],
+  "eggplant": ["aubergine", "brinjal"],
+  "cilantro": ["coriander", "chinese parsley"],
+  "bell pepper": ["capsicum", "sweet pepper", "paprika pepper"],
+  "chickpea": ["garbanzo", "garbanzo bean", "cece bean", "chickpeas", "garbanzos"],
+  "zucchini": ["courgette"],
+  "arugula": ["rocket", "roquette", "rucola"],
+  "cornstarch": ["cornflour", "maize starch"],
+  "powdered sugar": ["confectioners sugar", "icing sugar"],
+  "heavy cream": ["double cream", "whipping cream"],
+  "all-purpose flour": ["plain flour", "white flour", "flour"],
+  "ground beef": ["minced beef", "beef mince", "ground meat"],
+  "tomato paste": ["tomato puree", "concentrated tomato"],
+  "passata": ["strained tomatoes", "tomato puree"],
+  "baking soda": ["bicarbonate of soda", "sodium bicarbonate"],
+  "vegetable oil": ["cooking oil", "canola oil", "rapeseed oil", "sunflower oil"],
+  "shrimp": ["prawn", "prawns"],
+  "soy sauce": ["soya sauce", "tamari", "shoyu"],
+  "hot pepper": ["chili", "chilli", "chile pepper", "jalapeno"]
+}

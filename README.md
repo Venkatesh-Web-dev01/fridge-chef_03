@@ -73,7 +73,19 @@ flowchart TD
 ```
 
 ---
-
+graph TD
+    User Photo/Input --> |Uploads Image| VisionEngine[Vision Detection Engine]
+    VisionEngine --> |Gemini / GPT-4o / Fallback| ConfirmedItems[Confirmed Ingredients Editor]
+    ConfirmedItems --> |Tag Expiry| ExpiryBoost[Use Soon Priority Bonus]
+    ConfirmedItems --> |Apply Preferences| RulesEngine[Dietary & Allergen Filters]
+    
+    RulesEngine --> |Filtered Items| MatchingEngine[Matching & Ranking Engine]
+    MatchingEngine --> |Fuzzy Match / Normalizer| DB[(Recipes DB & APIs)]
+    
+    DB --> |Ranked Results| UI[Frontend UI]
+    UI --> |Missing Items| Subs[Substitution Engine]
+    UI --> |Cooking Step| CookingMode[Interactive Step Cooking Mode]
+    UI --> |Export| ShoppingList[Smart Shopping List]
 ## 🚀 Features Checklist
 
 - [x] 📷 **Fridge/Pantry Photo Upload**: Drag-and-drop, file picker, and camera capture simulation.

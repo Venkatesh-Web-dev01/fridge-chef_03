@@ -190,3 +190,12 @@ Validates:
 - Expiry-aware ranking boost
 - Contextual culinary substitutions
 - SQLite database persistence
+
+git clone https://github.com/Venkatesh-Web-dev01/fridge-chef_03.git
+cd fridge-chef_03
+
+
+git add README.md
+git commit -m "Update README.md"
+git push origin main`     
+

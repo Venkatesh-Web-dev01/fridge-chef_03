@@ -199,3 +199,31 @@ git add README.md
 git commit -m "Update README.md"
 git push origin main`     
 
+ ## ⚙️ Core Logic & Decision Rules
+
+The platform follows a deterministic, rule-based processing engine before querying or ranking recipes:
+
+### 1. Hard Exclusion Rules (Safety & Dietary)
+* **Allergen Filter (Strict):** If `user.allergens` contains item $A$, any recipe containing $A$ or its canonical synonyms is assigned a match score of `0%` and removed from the candidate pool.
+* **Dietary Filter (Deterministic):**
+  * **Vegan:** Exclude `meat`, `poultry`, `fish`, `seafood`, `dairy`, `eggs`, `honey`, `gelatin`.
+  * **Vegetarian:** Exclude `meat`, `poultry`, `fish`, `seafood`, `gelatin`.
+  * **Keto:** Filter recipes where `carbs_per_serving > 15g`.
+  * **Gluten-Free:** Exclude `wheat`, `barley`, `rye`, `spelt`, `couscous`.
+
+### 2. Match Scoring & Expiry Priority Algorithm
+Recipes are ranked using an **Expiry-Aware Weighted Match Index**:
+
+$$\text{Score} = \left( \frac{\text{Owned Ingredients Matching Recipe}}{\text{Total Recipe Ingredients}} \times 100 \right) + \left( 15 \times \text{Expiring Items Used} \right)$$
+
+* **Base Match:** Computed against `Owned Pantry Items` + `Toggleable Kitchen Staples` (salt, oil, pepper, etc.).
+* **"Use Soon" Priority Boost:** Each ingredient tagged as `♻️ Use Soon` adds a **+15 point boost** to the recipe's total rank score, prioritizing waste reduction.
+
+### 3. Fallback & Substitution Logic
+* **If Match Score < 60%:** Query the `Substitution Engine` for missing non-essential ingredients (e.g., replace *Sour Cream* with *Plain Greek Yogurt*).
+* **Vision Service Fallback:** 
+  `Gemini / GPT-4o Vision` ➔ *(On API Failure/Timeout)* ➔ `YOLO/HuggingFace Stub` ➔ *(Offline)* ➔ `Zero-Config Smart Mock`.
+
+## 🎨 Design Thinking & UX Approach
+
+The application was designed using a 5-stage human-centered Design Thinking framework:

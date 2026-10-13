@@ -227,3 +227,20 @@ $$\text{Score} = \left( \frac{\text{Owned Ingredients Matching Recipe}}{\text{To
 ## 🎨 Design Thinking & UX Approach
 
 The application was designed using a 5-stage human-centered Design Thinking framework:
+### 1. Empathize (The User Context)
+* **User Pain Points:** Standing in front of an open fridge, feeling overwhelmed by random ingredients, and letting fresh produce go bad.
+* **Context of Use:** Messy hands in the kitchen, quick decision-making under time pressure, and dietary/allergy safety concerns.
+
+### 2. Define (Core Problem Statement)
+> *"How might we convert arbitrary, perishable fridge contents into actionable, safe, and step-by-step recipes without requiring manual entry or extra grocery runs?"*
+
+### 3. Ideate (Solution Architecture)
+* **Human-in-the-Loop AI:** AI Vision detects items, but allows an instant **Confirm & Edit** step so users maintain control.
+* **Culinary Safety First:** Separation of unpredictable AI (used for vision/ideas) and deterministic rules (used for allergen/dietary safety).
+
+### 4. Prototype (Interface Decisions)
+* **Distraction-Free Cooking Mode:** High-contrast typography, large buttons, step-by-step progression, and hands-free Web Audio timers for active cooking.
+* **Visual Match Badges:** Instant clarity on recipe match percentages and expiring ingredient usage.
+
+### 5. Test & Iterate (Refinement)
+* Integrated instant feedback through guided 1-click tour banners to ensure smooth demo navigation for hackathon judges and users alike.

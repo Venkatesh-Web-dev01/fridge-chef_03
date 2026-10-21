@@ -224,23 +224,4 @@ $$\text{Score} = \left( \frac{\text{Owned Ingredients Matching Recipe}}{\text{To
 * **Vision Service Fallback:** 
   `Gemini / GPT-4o Vision` ➔ *(On API Failure/Timeout)* ➔ `YOLO/HuggingFace Stub` ➔ *(Offline)* ➔ `Zero-Config Smart Mock`.
 
-## 🎨 Design Thinking & UX Approach
-
-The application was designed using a 5-stage human-centered Design Thinking framework:
-### 1. Empathize (The User Context)
-* **User Pain Points:** Standing in front of an open fridge, feeling overwhelmed by random ingredients, and letting fresh produce go bad.
-* **Context of Use:** Messy hands in the kitchen, quick decision-making under time pressure, and dietary/allergy safety concerns.
-
-### 2. Define (Core Problem Statement)
-> *"How might we convert arbitrary, perishable fridge contents into actionable, safe, and step-by-step recipes without requiring manual entry or extra grocery runs?"*
-
-### 3. Ideate (Solution Architecture)
-* **Human-in-the-Loop AI:** AI Vision detects items, but allows an instant **Confirm & Edit** step so users maintain control.
-* **Culinary Safety First:** Separation of unpredictable AI (used for vision/ideas) and deterministic rules (used for allergen/dietary safety).
-
-### 4. Prototype (Interface Decisions)
-* **Distraction-Free Cooking Mode:** High-contrast typography, large buttons, step-by-step progression, and hands-free Web Audio timers for active cooking.
-* **Visual Match Badges:** Instant clarity on recipe match percentages and expiring ingredient usage.
-
-### 5. Test & Iterate (Refinement)
-* Integrated instant feedback through guided 1-click tour banners to ensure smooth demo navigation for hackathon judges and users alike.
+🚀 Advanced Features & Concepts to Add1. Smart Household & Expiry EngineDynamic Shelf-Life Predictor: Instead of manual "Use Soon" tags, use an ML model or heuristics matrix to auto-calculate remaining shelf life based on item category, visual freshness score, and typical storage conditions (fridge vs. counter).Automated Expiry Push Alerts: Web push notifications or webhook integrations (e.g., Slack/Telegram) warning users: "Your baby spinach expires in 2 days — here are 3 quick recipes to save it."Zero-Waste Impact Metrics: Compute and display estimated money saved ($$), carbon emissions ($CO_2e$) prevented, and kilograms of food waste avoided over time.2. Multi-Modal Vision & Perception AIReceipt & Grocery Invoice Scanning (OCR): Allow users to upload grocery receipts to auto-populate the pantry alongside fridge/pantry photos using fine-tuned OCR + Named Entity Recognition (NER).Multi-Angle Photo Stitching / Batch Ingest: Process multiple images of different fridge shelves simultaneously and merge them into a unified deduplicated inventory.Bounding Box Visual Feedback: Show detected items directly overlaid on the user's photo with confidence scores, allowing users to tap on bounding boxes to correct mistakes.3. Hyper-Personalized Culinary IntelligencePortion & Scaling Transformer Engine: Dynamically recalculate ingredient quantities and cooking times based on selected serving counts or macro target goals.Flavor Profile & Pairing Graph: Leverage a graph structure (e.g., NetworkX or Neo4j) to suggest ingredient substitutions based on flavor similarity matrices (sweet, savory, umami, acidity) rather than static lookup tables.Pantry-Aware Grocery Budgeting: When missing items are identified, fetch real-time local store prices (via supermarket APIs or scraping) to show the estimated cost needed to complete a recipe.4. Production & AI Infrastructure UpgradesSemantic Vector Search (RAG): Store recipe embeddings in a vector database (e.g., Qdrant, ChromaDB, or PGVector) to enable semantic natural language queries like "Quick comfort food for a cold rainy evening using chicken."Edge Vision Processing (WebGPU / WASM): Run lightweight object detection models (e.g., YOLOv8-Nano) directly inside the user's browser using WebGPU/ONNX Runtime for instant, zero-latency ingredient extraction without API usage costs.LLM Guardrails & Structured Output Enforcement: Enforce JSON schema outputs from Gemini/GPT-4o using Pydantic or Instructor to guarantee zero parsing failures.

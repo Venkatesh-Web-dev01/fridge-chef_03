@@ -126,6 +126,21 @@ graph TD
 
 ---
 
+## 🔮 Future Roadmap & Advanced Architectural Concepts
+
+### 1. Intelligent Inventory & Food Waste Analytics
+* **Automated Shelf-Life Estimation:** Dynamic decay curves that calculate remaining shelf life based on visual freshness and storage domain.
+* **Sustainability & Impact Dashboard:** Real-time calculation of avoided $CO_2e$ emissions and money saved through waste reduction.
+* **Receipt & Invoice OCR:** Instant pantry ingestion by scanning digital or paper grocery receipts.
+
+### 2. Advanced Vision & Edge AI Pipeline
+* **In-Browser WebGPU Inference:** Low-latency object detection running locally via ONNX Runtime Web, saving cloud API credits.
+* **Interactive Bounding Box Editor:** Visual photo canvas overlay showing detected item boundaries for tap-to-correct human feedback.
+
+### 3. Graph-Based Culinary Engine & Vector RAG
+* **Flavor Profile Graph (FlavorDB):** Dynamic substitution suggestions based on chemical compound similarity and flavor pairing matrices.
+* **Vector Embeddings & Semantic Search:** Hybrid BM25 + Dense Retrieval (Qdrant/PGVector) for contextual natural language recipe queries.
+
 ## 🎬 2-Minute Hackathon Demo Pitch Script
 
 Follow the interactive **"Guided Demo Tour"** banner at the top of the app to demonstrate the complete pitch:
@@ -224,4 +239,10 @@ $$\text{Score} = \left( \frac{\text{Owned Ingredients Matching Recipe}}{\text{To
 * **Vision Service Fallback:** 
   `Gemini / GPT-4o Vision` ➔ *(On API Failure/Timeout)* ➔ `YOLO/HuggingFace Stub` ➔ *(Offline)* ➔ `Zero-Config Smart Mock`.
 
-🚀 Advanced Features & Concepts to Add1. Smart Household & Expiry EngineDynamic Shelf-Life Predictor: Instead of manual "Use Soon" tags, use an ML model or heuristics matrix to auto-calculate remaining shelf life based on item category, visual freshness score, and typical storage conditions (fridge vs. counter).Automated Expiry Push Alerts: Web push notifications or webhook integrations (e.g., Slack/Telegram) warning users: "Your baby spinach expires in 2 days — here are 3 quick recipes to save it."Zero-Waste Impact Metrics: Compute and display estimated money saved ($$), carbon emissions ($CO_2e$) prevented, and kilograms of food waste avoided over time.2. Multi-Modal Vision & Perception AIReceipt & Grocery Invoice Scanning (OCR): Allow users to upload grocery receipts to auto-populate the pantry alongside fridge/pantry photos using fine-tuned OCR + Named Entity Recognition (NER).Multi-Angle Photo Stitching / Batch Ingest: Process multiple images of different fridge shelves simultaneously and merge them into a unified deduplicated inventory.Bounding Box Visual Feedback: Show detected items directly overlaid on the user's photo with confidence scores, allowing users to tap on bounding boxes to correct mistakes.3. Hyper-Personalized Culinary IntelligencePortion & Scaling Transformer Engine: Dynamically recalculate ingredient quantities and cooking times based on selected serving counts or macro target goals.Flavor Profile & Pairing Graph: Leverage a graph structure (e.g., NetworkX or Neo4j) to suggest ingredient substitutions based on flavor similarity matrices (sweet, savory, umami, acidity) rather than static lookup tables.Pantry-Aware Grocery Budgeting: When missing items are identified, fetch real-time local store prices (via supermarket APIs or scraping) to show the estimated cost needed to complete a recipe.4. Production & AI Infrastructure UpgradesSemantic Vector Search (RAG): Store recipe embeddings in a vector database (e.g., Qdrant, ChromaDB, or PGVector) to enable semantic natural language queries like "Quick comfort food for a cold rainy evening using chicken."Edge Vision Processing (WebGPU / WASM): Run lightweight object detection models (e.g., YOLOv8-Nano) directly inside the user's browser using WebGPU/ONNX Runtime for instant, zero-latency ingredient extraction without API usage costs.LLM Guardrails & Structured Output Enforcement: Enforce JSON schema outputs from Gemini/GPT-4o using Pydantic or Instructor to guarantee zero parsing failures.
+🚀 Advanced Features & Concepts to Add1. Smart Household & Expiry EngineDynamic Shelf-Life Predictor: Instead of manual "Use Soon" tags, use an ML model or heuristics matrix to auto-calculate remaining shelf life based on item category, visual freshness score, and typical storage conditions (fridge vs. counter).Automated Expiry Push Alerts: Web push notifications or webhook integrations (e.g., Slack/Telegram) warning users: "Your baby spinach expires in 2 days — here are 3 quick recipes to save it."Zero-Waste Impact Metrics: Compute and display estimated money saved ($$), carbon emissions ($CO_2e$) prevented, and kilograms of food waste avoided over time.
+
+2. Multi-Modal Vision & Perception AIReceipt & Grocery Invoice Scanning (OCR): Allow users to upload grocery receipts to auto-populate the pantry alongside fridge/pantry photos using fine-tuned OCR + Named Entity Recognition (NER).Multi-Angle Photo Stitching / Batch Ingest: Process multiple images of different fridge shelves simultaneously and merge them into a unified deduplicated inventory.Bounding Box Visual Feedback: Show detected items directly overlaid on the user's photo with confidence scores, allowing users to tap on bounding boxes to correct mistakes.
+
+3. Hyper-Personalized Culinary IntelligencePortion & Scaling Transformer Engine: Dynamically recalculate ingredient quantities and cooking times based on selected serving counts or macro target goals.Flavor Profile & Pairing Graph: Leverage a graph structure (e.g., NetworkX or Neo4j) to suggest ingredient substitutions based on flavor similarity matrices (sweet, savory, umami, acidity) rather than static lookup tables.Pantry-Aware Grocery Budgeting: When missing items are identified, fetch real-time local store prices (via supermarket APIs or scraping) to show the estimated cost needed to complete a recipe.
+
+4. Production & AI Infrastructure UpgradesSemantic Vector Search (RAG): Store recipe embeddings in a vector database (e.g., Qdrant, ChromaDB, or PGVector) to enable semantic natural language queries like "Quick comfort food for a cold rainy evening using chicken."Edge Vision Processing (WebGPU / WASM): Run lightweight object detection models (e.g., YOLOv8-Nano) directly inside the user's browser using WebGPU/ONNX Runtime for instant, zero-latency ingredient extraction without API usage costs.LLM Guardrails & Structured Output Enforcement: Enforce JSON schema outputs from Gemini/GPT-4o using Pydantic or Instructor to guarantee zero parsing failures.

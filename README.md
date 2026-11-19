@@ -3,6 +3,28 @@
 > **Hackathon Edition** — Turn open fridge photos into delicious, zero-waste dinners with AI vision, match-percentage ranking, culinary substitutions, and step-by-step cooking timers.
 
 ---
+<div align="center">
+
+  <h1>🍳 FridgeChef AI: Multimodal Recipe Generator from Fridge Photos</h1>
+
+  <p>
+    <strong>Hackathon Edition</strong> — Turn open fridge photos into delicious, zero-waste dinners with AI vision, match-percentage ranking, culinary substitutions, and step-by-step cooking timers.
+  </p>
+
+  <!-- Tech Stack Badges -->
+  <p>
+    <img src="https://img.shields.io/badge/React_18-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React 18" />
+    <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
+    <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
+    <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI" />
+    <img src="https://img.shields.io/badge/Google_Gemini-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white" alt="Google Gemini" />
+    <img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI" />
+    <img src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite" />
+  </p>
+
+</div>
+
+---
 
 ## 🌟 Problem & Objective
 
